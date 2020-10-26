@@ -1,0 +1,25 @@
+﻿<Window x:Name="mainWindow1" x:Class="Regplace.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Regplace"
+        mc:Ignorable="d"
+        Title="Regplace" Height="450" Width="840" FontFamily="Tahoma" FontSize="11" Loaded="Window_Loaded" Icon="registry.png">
+    <Grid>
+        <TreeView x:Name="treeView1" Margin="0,27,0,0" BorderThickness="0" FontSize="12" Padding="5"/>
+        <Menu x:Name="menu1" Height="27" VerticalAlignment="Top" FontFamily="Tahoma" FontSize="11" BorderThickness="0" Background="White" BorderBrush="Black">
+            <MenuItem Header="File" FontWeight="Bold">
+                <MenuItem x:Name="aboutMenuBtn1" Header="About" Click="AboutMenuBtn1_Click"/>
+                <MenuItem x:Name="quitMenuBtn1" Header="Quit" Click="QuitMenuBtn1_Click"/>
+            </MenuItem>
+            <MenuItem Header="Edit" FontWeight="Bold">
+                <MenuItem x:Name="searchReplaceMenuBtn1" Header="Search &amp; Replace" Click="SearchReplaceMenuBtn1_Click"/>
+            </MenuItem>
+            <Separator/>
+            <Label Content="Registry Path:" FontSize="11" FontFamily="Tahoma"/>
+            <TextBox x:Name="textBox1" Width="370" FontFamily="Tahoma" FontSize="11" Padding="1" Height="18" KeyUp="TextBox1_KeyUp"/>
+            <ComboBox x:Name="bit1" SelectionChanged="Bit1_SelectionChanged"/>
+        </Menu>
+    </Grid>
+</Window>
